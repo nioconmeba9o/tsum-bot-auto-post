@@ -1,8 +1,8 @@
 name: Discord Bot Auto Post
 
 on:
-  schedule:
-    - cron: "*/30 * * * *"
+ # schedule:
+ #   - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -25,4 +25,4 @@ jobs:
       env:
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
-      run: python main(disable).py
+      run: python main.py
